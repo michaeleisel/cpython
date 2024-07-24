@@ -4474,7 +4474,9 @@ if test "$cross_compiling" = yes; then
 		MACHDEP="unknown"
 		as_fn_error $? "cross build not supported for $host" "$LINENO" 5
 	esac
-	_PYTHON_HOST_PLATFORM="$MACHDEP${_host_ident:+-$_host_ident}"
+  if [ -z "${_PYTHON_HOST_PLATFORM}" ]; then
+    _PYTHON_HOST_PLATFORM="$MACHDEP${_host_ident:+-$_host_ident}"
+  fi
 fi
 
 # Some systems cannot stand _XOPEN_SOURCE being defined at all; they

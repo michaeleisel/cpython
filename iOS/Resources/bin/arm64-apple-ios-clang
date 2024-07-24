@@ -1,2 +1,3 @@
 #!/bin/sh
-xcrun --sdk iphoneos${IOS_SDK_VERSION} clang -target arm64-apple-ios $@
+# xcrun --sdk iphoneos${IOS_SDK_VERSION} clang -I~/projects/cpython/build_oot/host/iOS/Frameworks/arm64-iphoneos/include/python3.13d -F/Users/meisel/projects/cpython/build_oot/host/iOS/Frameworks/arm64-iphoneos -target arm64-apple-ios $@
+xcrun --sdk iphoneos${IOS_SDK_VERSION} clang -I/Users/meisel/.pyenv/versions/3.13.0b3/include/python3.13 -F/Users/meisel/projects/cpython/build_oot/host/iOS/Frameworks/arm64-iphoneos -target arm64-apple-ios $@
